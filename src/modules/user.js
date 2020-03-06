@@ -1,5 +1,5 @@
 import {createAction,handleActions} from 'redux-actions';
-import {takeLatest} from 'redux-saga/effects';
+import {takeLatest,call} from 'redux-saga/effects';
 import *as authAPI from '../lib/api/auth';
 import createRequestSaga,{createRequestActionTypes} from '../lib/createRequestSaga';
 
@@ -23,9 +23,19 @@ function checkFailureSaga(){
     }
 }
 
+function*logoutSaga(){
+    try{
+        yield call(authAPI.logout);
+        localStorage.removeItem('user');
+    }catch(e){
+        console.log(e);
+    }
+}
+
 export function *userSaga(){
     yield takeLatest(CHECK,checkSaga);
     yield takeLatest(CHECK_FAILURE,checkFailureSaga);
+    yield takeLatest(LOGOUT,logoutSaga)
 };
 
 const initialState={
