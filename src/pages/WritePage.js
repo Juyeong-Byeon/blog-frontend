@@ -1,9 +1,20 @@
-import React from 'react'
+import React from 'react';
+import EditorContainer from '../containers/write/EditorContainer';
+import Responsive from '../components/common/Responsive';
+import WriteActionButtonContainer from '../containers/write/WriteActionButtonsContainer';
+import HeaderContainer from '../containers/common/HeaderContainer';
+import TagBoxContainer from '../containers/write/TagBoxContainer';
 
 export default function WritePage() {
     return (
-        <div>
-            글작성
-        </div>
+        <>
+        <HeaderContainer></HeaderContainer>
+        <Responsive>
+            
+        <EditorContainer/>
+            <TagBoxContainer/>
+            <WriteActionButtonContainer/>
+        </Responsive>
+        </>
     )
 }
