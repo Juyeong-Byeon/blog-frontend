@@ -1,13 +1,15 @@
 import React from 'react'
-import Button from '../components/common/Button';
-import Header from '../components/common/Header';
 import HeaderContainer from '../containers/common/HeaderContainer';
+import PostListContainer from '../containers/posts/PostListContainer';
+import PaginationContainer from '../containers/posts/PaginationContainer';
+
 
 export default function PostListPage() {
     return (
             <>
-                <HeaderContainer></HeaderContainer>
-                <h1>h1</h1>
+                <HeaderContainer/>
+                <PostListContainer/>
+                <PaginationContainer/>
             </>
     )
 }
