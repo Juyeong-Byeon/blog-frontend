@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import Responsive from '../../components/common/Responsive';
+import Responsive from '../common/Responsive';
 import palette from '../../styles/palette';
 import Button from '../common/Button';
 import Tags from '../common/Tags';

@@ -43,7 +43,7 @@ export default function Header({user,onLogout}) {
         <>
             <HeaderBlock>
                 <Wrapper>
-                    <Link to='/' className="logo">REACTERS</Link>
+                    <Link to='/' className="logo">Drone's play ground</Link>
                         {user?
                         (<div className='right'>
                             <UserInfo>

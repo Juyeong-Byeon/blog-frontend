@@ -27,7 +27,8 @@ const PostContent=styled.div`
 
 
 
-export default function PostViewer({post,loading,error}) {
+export default function PostViewer({post,loading,error,actionButtons,ownPost}) {
+    console.log(ownPost);
     if(error){
         if(error.response&&error.response.status===404){
             return<PostViewerBlock>존제하지 않는 포스트 입니다.</PostViewerBlock>
@@ -47,6 +48,7 @@ export default function PostViewer({post,loading,error}) {
                 <SubInfo username={user.username} publishedDate={publishedDate} hasMarginTop/>
                 <Tags tags={tags}/>
             </PostHead>
+            {actionButtons}
             <PostContent dangerouslySetInnerHTML={{__html:body}}/>
         </PostViewerBlock>
     )

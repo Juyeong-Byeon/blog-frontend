@@ -38,7 +38,7 @@ export default function AuthTemplate({children}) {
             <AuthTemplateBlock>
                 <WhiteBox>
                     <div className='logo-area'>
-                       <Link to='/'> REACTERS</Link>
+                       <Link to='/'>Drone's play ground</Link>
                     </div>
                     {children}
                 </WhiteBox>
